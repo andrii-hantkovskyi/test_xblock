@@ -1,0 +1,40 @@
+<div class="testxblock_block">
+    <h1>TestXBlock: current topics</h1>
+    <div class='questions__container'>
+        <h1>Questions</h1>
+        <div class="questions__list">
+            {self.questions}
+        </div>
+        <form hx-trigger="submit" hx-ext="json-enc" hx-target=".questions__list" hx-swap="innerHTML"
+            class="questions_new__form">
+            <input type="text" name="topic_type" value="question" hidden>
+            <input type="text" name="title" placeholder="title" id="question_title">
+            <input type="text" name="content" placeholder="content" id="question_content">
+            <input type="submit" id="add_question" value="Add question">
+            <br>
+            <br>
+            <button id="pop_question">Pop question</button>
+        </form>
+    </div>
+    <div class='suggestions__container'>
+        <h1>Suggestions</h1>
+        <div class="suggestions__list">
+            {self.suggestions}
+        </div>
+        <form hx-trigger="submit" hx-ext="json-enc" hx-target=".suggestions__list" hx-swap="innerHTML"
+            class="suggestions_new__form">
+            <input type="text" name="topic_type" value="suggestion" hidden>
+            <input type="text" name="title" placeholder="title" id="suggestion_title">
+            <input type="text" name="content" placeholder="content" id="suggestion_content">
+            <input type="submit" id="add_suggestion" value="Add suggestion">
+            <br>
+            <br>
+            <button id="pop_suggestion">Pop suggestion</button>
+        </form>
+    </div>
+</div>
+
+<script src="https://unpkg.com/htmx.org@1.9.10"
+    integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+    crossorigin="anonymous"></script>
+<script src="https://unpkg.com/htmx.org/dist/ext/json-enc.js"></script>

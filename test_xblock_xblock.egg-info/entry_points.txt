@@ -1,2 +1,0 @@
-[xblock.v1]
-test_xblock = test_xblock:TextXBlock

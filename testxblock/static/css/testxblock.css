@@ -1,0 +1,27 @@
+/* CSS for TestXBlock */
+
+.questions__container h1 {
+    color: #007dff;
+}
+
+.questions__container .questions__list {
+    border: 2px solid #007dff;
+    padding: 0.25rem 1rem;
+    border-radius: 16px;
+    margin-bottom: 0.5rem;
+}
+
+.suggestions__container {
+    margin-top: 3rem;
+}
+
+.suggestions__container h1 {
+    color: #11cc11;
+}
+
+.suggestions__container .suggestions__list {
+    border: 2px solid #007dff;
+    padding: 0.25rem 1rem;
+    border-radius: 16px;
+    margin-bottom: 0.5rem;
+}

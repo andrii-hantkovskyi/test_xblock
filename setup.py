@@ -1,4 +1,4 @@
-"""Setup for test_xblock XBlock."""
+"""Setup for testxblock XBlock."""
 
 
 import os
@@ -23,20 +23,20 @@ def package_data(pkg, roots):
 
 
 setup(
-    name='test_xblock-xblock',
+    name='testxblock-xblock',
     version='0.1',
-    description='test_xblock XBlock',   # TODO: write a better description.
+    description='testxblock XBlock',   # TODO: write a better description.
     license='UNKNOWN',          # TODO: choose a license: 'AGPL v3' and 'Apache 2.0' are popular.
     packages=[
-        'test_xblock',
+        'testxblock',
     ],
     install_requires=[
         'XBlock',
     ],
     entry_points={
         'xblock.v1': [
-            'test_xblock = test_xblock:TextXBlock',
+            'testxblock = testxblock:TestXBlock',
         ]
     },
-    package_data=package_data("test_xblock", ["static", "public"]),
+    package_data=package_data("testxblock", ["static", "public"]),
 )
