@@ -61,8 +61,7 @@ class TestXBlock(XBlock):
         title, content = data['title'], data['content']
 
         topics = getattr(self, f'{topic_type}s')
-        topics += f"\n<div class='{topic_type}s__item'><h2>{
-            title}</h2><p>{content}</p></div><hr>"
+        topics += f"\n<div class='{topic_type}s__item'><h2>{title}</h2><p>{content}</p></div><hr>"
         setattr(self, f'{topic_type}s', topics)
 
         return Response(topics.replace("\n", ""), content_type="text/html; charset=utf-8")
