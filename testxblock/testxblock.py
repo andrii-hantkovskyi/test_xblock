@@ -43,6 +43,8 @@ class TestXBlock(XBlock):
             "static/js/src/testxblock.js"))
         frag.initialize_js('TestXBlock')
         return frag
+    problem_view = student_view
+    studio_view = student_view
 
     # TO-DO: change this handler to perform your own actions.  You may need more
     # than one handler, or you may not need any handlers at all.
