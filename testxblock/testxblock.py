@@ -23,9 +23,9 @@ class TestXBlock(XBlock):
     icon_class = 'other'
 
     questions = String(
-        default='', scope=Scope.content, help='Questions')
+        default='', scope=Scope.user_state_summary, help='Questions')
     suggestions = String(
-        default='', scope=Scope.content, help='Suggestions')
+        default='', scope=Scope.user_state_summary, help='Suggestions')
 
     def resource_string(self, path):
         """Handy helper for getting resources from our kit."""
