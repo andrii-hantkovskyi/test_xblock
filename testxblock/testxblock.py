@@ -1,5 +1,7 @@
 """TO-DO: Write a description of what this XBlock is."""
+import datetime
 import logging
+from random import randint
 
 import pkg_resources
 from web_fragments.fragment import Fragment
@@ -21,9 +23,9 @@ class TestXBlock(XBlock):
     icon_class = 'other'
 
     questions = String(
-        default='', scope=Scope.user_state_summary, help='Questions')
+        default='', scope=Scope.content, help='Questions')
     suggestions = String(
-        default='', scope=Scope.user_state_summary, help='Suggestions')
+        default='', scope=Scope.content, help='Suggestions')
 
     def resource_string(self, path):
         """Handy helper for getting resources from our kit."""
@@ -43,8 +45,6 @@ class TestXBlock(XBlock):
             "static/js/src/testxblock.js"))
         frag.initialize_js('TestXBlock')
         return frag
-    problem_view = student_view
-    studio_view = student_view
 
     # TO-DO: change this handler to perform your own actions.  You may need more
     # than one handler, or you may not need any handlers at all.
